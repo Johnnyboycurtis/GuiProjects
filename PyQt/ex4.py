@@ -46,8 +46,8 @@ class newWindow(QtGui.QMainWindow):
 
     def words(self):
         "Method for generating random words using the random_words module"
-        rw = RandomWords()
-        a = rw.random_word()
+        randwords = RandomWords()
+        a = randwords.random_word()
         self.wordhistory.append(a)
         print(a)
 
