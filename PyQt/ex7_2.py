@@ -33,6 +33,8 @@ class MyWindow(QWidget):
     def run_command(self):
         cmd = str(self.le.text())
         stdouterr = os.popen(cmd).read() ## https://docs.python.org/3/library/os.html#os.popen
+        #(Note that the subprocess module provides more powerful facilities for spawning new processes and retrieving their results;
+        #using that module is preferable to using these functions. Check especially the Replacing Older Functions with the subprocess Module section.)
         self.te.setText(stdouterr)
 
 if __name__ == "__main__":
